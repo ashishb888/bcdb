@@ -32,7 +32,7 @@
           disableBack: true
         });
 
-        $state.go(sConfig.appStates.menu_profiles);
+        $state.go(sConfig.appStates.menu_db);
       } catch (exception) {
         logger.error("exception: " + exception);
       }

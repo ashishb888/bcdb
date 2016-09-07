@@ -14,7 +14,6 @@
     // Declare services here
     us.appAlert = appAlert;
     us.reloadScreen = reloadScreen;
-    us.retryService = retryService;
     us.isAppOnlineService = isAppOnlineService;
     us.getLogger = getLogger;
     us.errorHandler = errorHandler;
@@ -24,7 +23,6 @@
     us.executeQuery = executeQuery;
     us.selectQuery = selectQuery;
     us.insertQuery = insertQuery;
-    us.base64 = base64;
     us.toastMessage = toastMessage;
     us.noNetwork = noNetwork;
 
@@ -128,23 +126,6 @@
     }
 
 
-    // Shows no connection screen
-    function retryService(title, screen, navBarVal) {
-      if (navBarVal != undefined || navBarVal != null) {
-        $state.go('retry', {
-          screenTitle: title,
-          screenState: screen,
-          navBar: navBarVal
-        });
-      } else {
-        $state.go('retry', {
-          screenTitle: title,
-          screenState: screen
-        });
-      }
-    }
-
-
     /* Shows ionic alertPopup, and on the click of button it redirects to the state
      passed as parameter. */
     function appAlert(msg, state, title) {
@@ -157,23 +138,6 @@
           $state.go(state);
         }
       });
-    }
-
-    function base64(path) {
-      try {
-        var pathArr = path.split("/");
-        var fileNm = encodeURI(pathArr.pop());
-
-        return $cordovaFile.readAsDataURL(pathArr.join("/"), fileNm)
-          .then(function(fileData) {
-            //logger.debug("fileData: " + fileData);
-            return fileData.split(',').pop();
-          }, function(error) {
-            logger.error("error: " + JSON.stringify(error));
-          });
-      } catch (exception) {
-        logger.error("exception: " + exception);
-      }
     }
 
     function initDB(dbName, dbVersion, dbDescription, dbSize) {
@@ -267,14 +231,6 @@
             ]);
         });
 
-        /*  db.transaction(function(transaction) {
-              transaction.executeSql(query, bindings, function(transaction, result) {
-                  deferred.resolve(result);
-              }, function(transaction, error) {
-                  deferred.reject(error);
-              });
-          });
-          query11(query);*/
         console.log('Table ' + table.name + ' initialized');
       });
 

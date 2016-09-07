@@ -27,21 +27,10 @@ angular.module('starter').constant('starterConfig', (function() {
     signup: "signup",
     forgotpassword: "forgotpassword",
     menu: "menu",
-    menu_account: "menu.account",
     menu_help: "menu.help",
     menu_tc: "menu.tc",
-    menu_profiles: "menu.profiles",
     menu_settings: "menu.settings",
-    menu_profile: "menu.profile",
-    menu_images: "menu.images",
-    menu_pprofiles: "menu.pprofiles",
-    menu_eprofile: "menu.eprofile",
-    menu_emyprofile: "menu.emyprofile",
-    menu_profilesp: "menu.profilesp",
-    menu_slprofiles: "menu.slprofiles",
-    menu_pinfo: "menu.pinfo",
-    welcome: "welcome",
-    dp: "dp",
+    menu_db: "menu.db",
     retry: "retry"
   };
   var screenTitles = {

@@ -1,8 +1,33 @@
 <ion-view view-title="Dashboard">
   <ion-content>
+    <!-- Line chart -->
     <div class="card">
-      <div class="item item-text-wrap">
-        Comming soon...
+      <canvas id="line" class="chart chart-line" chart-data="dbc.lineData" chart-labels="dbc.lineLabels"
+          chart-series="dbc.lineSeries" chart-options="dbc.lineOptions" chart-dataset-override="dbc.lineDatasetOverride">
+          </canvas>
+    </div>
+
+    <!-- Bar chart -->
+    <div class="card">
+      <canvas id="bar" class="chart chart-bar" chart-data="dbc.barData" chart-labels="dbc.barLabels"> chart-series="series">
+      </canvas>
+    </div>
+
+    <!-- Doughnut chart -->
+    <div class="card">
+      <canvas id="doughnut" class="chart chart-doughnut" chart-data="dbc.doughnutData" chart-labels="dbc.doughnutLabels">
+      </canvas>
+    </div>
+
+    <!-- Buble chart-->
+    <div class="card">
+      <canvas id="base" class="chart-base" chart-type="dbc.dType" chart-data="dbc.dData"
+          chart-labels="dbc.dLabels">
+      </canvas>
+      <div class="padding">
+        <button class="button button-full button-small button-royal" ng-click="dbc.toggle()">
+          Toggle
+        </button>
       </div>
     </div>
   </ion-content>

@@ -22,7 +22,7 @@ var urls = {
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ngCordova', 'ngMessages',
-  'satellizer'
+  'satellizer', 'chart.js'
 ])
 
 .run(function($ionicPlatform, $rootScope, $ionicLoading, utilService, lsService,
@@ -85,11 +85,13 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngMessages',
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider,
-  $httpProvider, $logProvider, $sceDelegateProvider, $authProvider) {
+  $httpProvider, $logProvider, $sceDelegateProvider, $authProvider, ChartJsProvider) {
   console.debug("config() start");
   console.debug("env: " + env);
   var urlWhiteListSuffix = "/**";
   var urlWhiteList = ["self"];
+
+  ChartJsProvider.setOptions({ colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'] });
 
   /* Depending upon env it Enables/disables debug statements */
   switch (env) {
@@ -346,7 +348,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'ngMessages',
       url: '/db',
       views: {
         'menuContent': {
-          templateUrl: 'app/db/db.html'
+          templateUrl: 'app/db/db.html',
+          controller: 'DBCtrl as dbc'
         }
       }
     });

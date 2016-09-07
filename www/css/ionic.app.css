@@ -9942,7 +9942,7 @@ a.button, a.icons, a.r-icons, a.l-icons {
 .open-sans {
   font-family: "OpenSans" !important; }
 
-.open-sans-semibold {
+.open-sans-semibold, .button, .icons, .r-icons, .l-icons {
   font-family: "OpenSans-Semibold" !important; }
 
 .open-sans-light {
@@ -10146,3 +10146,27 @@ p.info {
 .menu .scroll {
   background-color: $royal;
 }*/
+.menu-left .has-header {
+  top: 0px !important; }
+
+.bg-clr, .banner {
+  background-image: url("../img/banner.jpg"); }
+
+.banner {
+  border-style: none !important;
+  height: 150px !important; }
+
+.menu-left .item-avatar {
+  min-height: 150px !important; }
+
+.banner-img {
+  top: 50px !important; }
+
+.banner-h2 {
+  margin-top: 34px !important; }
+
+.white-clr, .banner-h2 {
+  color: #fff !important; }
+
+.action-sheet .button, .action-sheet .icons, .action-sheet .r-icons, .action-sheet .l-icons {
+  color: #444 !important; }

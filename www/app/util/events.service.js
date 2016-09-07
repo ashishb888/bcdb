@@ -32,7 +32,7 @@
     });
 
     $ionicPlatform.on("pause", function() {
-      httpCallsService.updateLastActive();
+      // httpCallsService.updateLastActive();
       logger.debug("$ionicPlatform pause");
     });
 
@@ -54,7 +54,7 @@
             disableBack: true
           });
           $state.go(sConfig.appStates.retry, {
-            "state": sConfig.appStates.menu_profiles
+            "state": sConfig.appStates.menu_db
           });
         }
 
@@ -72,7 +72,7 @@
           disableBack: true
         });
 
-        $state.go(sConfig.appStates.menu_profiles);
+        $state.go(sConfig.appStates.menu_db);
 
         utilService.toastMessage(sConfig.msgs.connMsg);
       } catch (exception) {
