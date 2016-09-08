@@ -1,4 +1,4 @@
-<ion-view side="right" view-title="Broadcamp DB" title="Broadcamp DB" hide-back-button="true" hide-nav-bar="false">
+<ion-view side="right" view-title="Sign in" title="Sign in" hide-back-button="true" hide-nav-bar="false">
   <ion-content class="">
     <div class="padding">
       <div class="logo center">
@@ -15,13 +15,13 @@
           <input type="password" placeholder="Password" ng-model="signinCtrl.sf.password" ng-required="true" ng-minlength="6">
         </label>
         <div class="padding">
-          <button class="button button-full button-small button-royal" ng-disabled="signinForm.$invalid" ng-click="signinCtrl.signin()">
+          <button class="button button-full button-small button-assertive" ng-disabled="signinForm.$invalid" ng-click="signinCtrl.signin()">
             Sign in
           </button>
-          <!--<button class="button button-full button-royal" ui-sref="signup">
+          <!--<button class="button button-full button-assertive" ui-sref="signup">
             Sign up
           </button>
-          <button class="button button-full button-royal" ui-sref="forgotpassword">
+          <button class="button button-full button-assertive" ui-sref="forgotpassword">
             Forgot password?
           </button>-->
           <!--<button class="button button-primary button-block " ng-click="checkForUpdates()">

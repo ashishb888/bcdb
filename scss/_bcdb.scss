@@ -49,7 +49,7 @@
 
 /* Overriding positive */
 .button.button-positive {
-  background-color: $royal !important;
+  background-color: $assertive !important;
 }
 
 .topper {
@@ -114,11 +114,11 @@
 }
 
 .txt-color {
-  color: $royal !important;
+  color: $assertive !important;
 }
 
 .signin-links {
-  color: $royal;
+  color: $assertive;
   @extend .txt-underline;
   @extend .col;
   @extend .col-50;
@@ -320,11 +320,11 @@ p.info {
 }
 
 /*.menu .item {
-  background-color: $royal;
+  background-color: $assertive;
 }
 
 .menu .scroll {
-  background-color: $royal;
+  background-color: $assertive;
 }*/
 
 .button {
