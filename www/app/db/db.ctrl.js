@@ -25,9 +25,9 @@
     ];
     dbc.lineDatasetOverride = [{
       yAxisID: 'y-axis-1'
-    }, {
+    }/*, {
       yAxisID: 'y-axis-2'
-    }];
+    }*/];
     dbc.lineOptions = {
       scales: {
         yAxes: [{
@@ -35,12 +35,12 @@
           type: 'linear',
           display: true,
           position: 'left'
-        }, {
+        }/*, {
           id: 'y-axis-2',
           type: 'linear',
           display: true,
           position: 'right'
-        }]
+        }*/]
       }
     };
 

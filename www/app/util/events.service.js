@@ -13,6 +13,7 @@
 
     // Declare services here
     es.startEvents = startEvents;
+
     // Functions definations
     function startEvents() {
       try {
@@ -38,10 +39,6 @@
 
     $ionicPlatform.on("resume", function() {
       logger.debug("$ionicPlatform resume");
-    });
-
-    $ionicPlatform.on("exit", function() {
-      logger.debug("$ionicPlatform exit");
     });
 
     $rootScope.$on('$cordovaNetwork:offline', function(event, networkState) {
